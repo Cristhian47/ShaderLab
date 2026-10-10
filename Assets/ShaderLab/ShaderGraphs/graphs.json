@@ -1,0 +1,386 @@
+{
+ "items": [
+  {
+   "file": "Fundamentos/F1_Color",
+   "title": "Mi primer color",
+   "level": 0,
+   "kind": "fundamento",
+   "key": "F1",
+   "concepts": [
+    "Master Stack",
+    "Base Color",
+    "Propiedad (Property)"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Fundamentos/F1_Color",
+   "hlsl": ""
+  },
+  {
+   "file": "Fundamentos/F2_Gradiente",
+   "title": "Gradiente por altura",
+   "level": 0,
+   "kind": "fundamento",
+   "key": "F2",
+   "concepts": [
+    "Position",
+    "Split",
+    "Remap",
+    "Lerp"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Fundamentos/F2_Gradiente",
+   "hlsl": ""
+  },
+  {
+   "file": "Fundamentos/F3_Tiempo",
+   "title": "Animar con el tiempo",
+   "level": 0,
+   "kind": "fundamento",
+   "key": "F3",
+   "concepts": [
+    "Time",
+    "Sine",
+    "Multiply / Add",
+    "Lerp"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Fundamentos/F3_Tiempo",
+   "hlsl": ""
+  },
+  {
+   "file": "Fundamentos/F4_Fresnel",
+   "title": "Brillo de borde (Fresnel)",
+   "level": 0,
+   "kind": "fundamento",
+   "key": "F4",
+   "concepts": [
+    "Fresnel Effect",
+    "Color HDR",
+    "Multiply"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Fundamentos/F4_Fresnel",
+   "hlsl": ""
+  },
+  {
+   "file": "Objects/SG_00_LiquidFill",
+   "title": "Liquido en una esfera",
+   "level": 1,
+   "kind": "objeto",
+   "key": "LiquidFill",
+   "concepts": [
+    "Position (Object)",
+    "Alpha Clip",
+    "Is Front Face",
+    "Fresnel",
+    "Remap"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_00_LiquidFill",
+   "hlsl": "ShaderLab/Objects/LiquidFill"
+  },
+  {
+   "file": "Objects/SG_01_Toon",
+   "title": "Toon / Cel shading",
+   "level": 2,
+   "kind": "objeto",
+   "key": "Toon",
+   "concepts": [
+    "Custom Function (luz)",
+    "Normal Vector",
+    "Ceiling (bandas)",
+    "Step",
+    "Smoothstep"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_01_Toon",
+   "hlsl": "ShaderLab/Objects/Toon"
+  },
+  {
+   "file": "Objects/SG_02_Outline_Objeto",
+   "title": "Contorno (1/2): el objeto",
+   "level": 2,
+   "kind": "objeto",
+   "key": "Outline",
+   "concepts": [
+    "Lit Target",
+    "Multi-material"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_02_Outline_Objeto",
+   "hlsl": "ShaderLab/Objects/Outline",
+   "pairedWith": "Objects/SG_02_Outline_Contorno"
+  },
+  {
+   "file": "Objects/SG_02_Outline_Contorno",
+   "title": "Contorno (2/2): el casco invertido",
+   "level": 2,
+   "kind": "objeto",
+   "key": "OutlineHull",
+   "concepts": [
+    "Vertex Position",
+    "Transform",
+    "Render Face = Back"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_02_Outline_Contorno",
+   "hlsl": "ShaderLab/Objects/Outline",
+   "pairedWith": "Objects/SG_02_Outline_Objeto",
+   "hidden": true
+  },
+  {
+   "file": "Objects/SG_03_PlasmaShield",
+   "title": "Escudo de plasma",
+   "level": 3,
+   "kind": "objeto",
+   "key": "PlasmaShield",
+   "concepts": [
+    "Surface Type Transparent + Additive",
+    "Gradient Noise",
+    "Scene Depth",
+    "Screen Position Raw"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_03_PlasmaShield",
+   "hlsl": "ShaderLab/Objects/PlasmaShield"
+  },
+  {
+   "file": "Objects/SG_04_Hologram",
+   "title": "Holograma con glitch",
+   "level": 3,
+   "kind": "objeto",
+   "key": "Hologram",
+   "concepts": [
+    "Vertex stage",
+    "Random Range",
+    "Transform",
+    "Scanlines"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_04_Hologram",
+   "hlsl": "ShaderLab/Objects/Hologram"
+  },
+  {
+   "file": "Objects/SG_05_Dissolve",
+   "title": "Disolver",
+   "level": 3,
+   "kind": "objeto",
+   "key": "Dissolve",
+   "concepts": [
+    "Boolean + Branch",
+    "Alpha Clip",
+    "Emission",
+    "Gradient Noise"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_05_Dissolve",
+   "hlsl": "ShaderLab/Objects/Dissolve"
+  },
+  {
+   "file": "Objects/SG_06_Lava",
+   "title": "Lava",
+   "level": 3,
+   "kind": "objeto",
+   "key": "Lava",
+   "concepts": [
+    "UV",
+    "Tiling And Offset",
+    "Domain warp",
+    "Gradient Noise",
+    "Smoothstep"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_06_Lava",
+   "hlsl": "ShaderLab/Objects/Lava"
+  },
+  {
+   "file": "Objects/SG_07_Slime",
+   "title": "Slime gelatinoso",
+   "level": 4,
+   "kind": "objeto",
+   "key": "Slime",
+   "concepts": [
+    "Vertex displacement",
+    "Lit Target",
+    "Smoothness",
+    "Emission",
+    "Alpha"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_07_Slime",
+   "hlsl": "ShaderLab/Objects/Slime"
+  },
+  {
+   "file": "Objects/SG_08_Water",
+   "title": "Agua con espuma",
+   "level": 5,
+   "kind": "objeto",
+   "key": "Water",
+   "concepts": [
+    "Vertex waves",
+    "Scene Depth",
+    "Normal en Vertex",
+    "Espuma",
+    "Fresnel"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Objects/SG_08_Water",
+   "hlsl": "ShaderLab/Objects/Water"
+  },
+  {
+   "file": "Screen/SG_S01_Grayscale",
+   "title": "Blanco y negro",
+   "level": 1,
+   "kind": "camara",
+   "key": "Grayscale",
+   "concepts": [
+    "Sample Buffer",
+    "Dot Product",
+    "Lerp"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S01_Grayscale",
+   "hlsl": "ShaderLab/Screen/S01_Grayscale"
+  },
+  {
+   "file": "Screen/SG_S02_Invert",
+   "title": "Invertir colores",
+   "level": 1,
+   "kind": "camara",
+   "key": "Invert",
+   "concepts": [
+    "One Minus",
+    "Lerp"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S02_Invert",
+   "hlsl": "ShaderLab/Screen/S02_Invert"
+  },
+  {
+   "file": "Screen/SG_S03_Sepia",
+   "title": "Sepia (foto antigua)",
+   "level": 2,
+   "kind": "camara",
+   "key": "Sepia",
+   "concepts": [
+    "Dot Product",
+    "Combine",
+    "UV del centro"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S03_Sepia",
+   "hlsl": "ShaderLab/Screen/S03_Sepia"
+  },
+  {
+   "file": "Screen/SG_S04_Vignette",
+   "title": "Vineta",
+   "level": 2,
+   "kind": "camara",
+   "key": "Vignette",
+   "concepts": [
+    "Screen node",
+    "Length",
+    "Smoothstep"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S04_Vignette",
+   "hlsl": "ShaderLab/Screen/S04_Vignette"
+  },
+  {
+   "file": "Screen/SG_S05_Pixelate",
+   "title": "Pixelar",
+   "level": 2,
+   "kind": "camara",
+   "key": "Pixelate",
+   "concepts": [
+    "Screen node",
+    "Floor",
+    "UV personalizada en Sample Buffer"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S05_Pixelate",
+   "hlsl": "ShaderLab/Screen/S05_Pixelate"
+  },
+  {
+   "file": "Screen/SG_S06_RetroPalette",
+   "title": "Paleta retro (Game Boy)",
+   "level": 3,
+   "kind": "camara",
+   "key": "RetroPalette",
+   "concepts": [
+    "Dither",
+    "Floor",
+    "Step",
+    "Paleta"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S06_RetroPalette",
+   "hlsl": "ShaderLab/Screen/S06_RetroPalette"
+  },
+  {
+   "file": "Screen/SG_S07_ChromaticAberration",
+   "title": "Aberracion cromatica",
+   "level": 3,
+   "kind": "camara",
+   "key": "ChromaticAberration",
+   "concepts": [
+    "Split",
+    "Combine",
+    "3 lecturas de UV"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S07_ChromaticAberration",
+   "hlsl": "ShaderLab/Screen/S07_ChromaticAberration"
+  },
+  {
+   "file": "Screen/SG_S08_Underwater",
+   "title": "Bajo el agua",
+   "level": 3,
+   "kind": "camara",
+   "key": "Underwater",
+   "concepts": [
+    "UV distorsionadas",
+    "Sin/Cos",
+    "Tint"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S08_Underwater",
+   "hlsl": "ShaderLab/Screen/S08_Underwater"
+  },
+  {
+   "file": "Screen/SG_S09_Blur",
+   "title": "Desenfoque (Blur)",
+   "level": 4,
+   "kind": "camara",
+   "key": "Blur",
+   "concepts": [
+    "Muchas lecturas",
+    "Pesos",
+    "Texel"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S09_Blur",
+   "hlsl": "ShaderLab/Screen/S09_Blur"
+  },
+  {
+   "file": "Screen/SG_S10_EdgeDetect",
+   "title": "Deteccion de bordes (Sobel)",
+   "level": 4,
+   "kind": "camara",
+   "key": "EdgeDetect",
+   "concepts": [
+    "Sobel",
+    "Branch",
+    "Boolean"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S10_EdgeDetect",
+   "hlsl": "ShaderLab/Screen/S10_EdgeDetect"
+  },
+  {
+   "file": "Screen/SG_S11_CRT",
+   "title": "Monitor CRT",
+   "level": 5,
+   "kind": "camara",
+   "key": "CRT",
+   "concepts": [
+    "UV curvada",
+    "Scanlines",
+    "Modulo",
+    "Combinar efectos"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S11_CRT",
+   "hlsl": "ShaderLab/Screen/S11_CRT"
+  },
+  {
+   "file": "Screen/SG_S12_DepthFog",
+   "title": "Niebla por profundidad",
+   "level": 4,
+   "kind": "camara",
+   "key": "DepthFog",
+   "concepts": [
+    "Scene Depth",
+    "Distancia en metros",
+    "Boolean"
+   ],
+   "shader": "ShaderLab/ShaderGraph/Screen/SG_S12_DepthFog",
+   "hlsl": "ShaderLab/Screen/S12_DepthFog"
+  }
+ ]
+}
